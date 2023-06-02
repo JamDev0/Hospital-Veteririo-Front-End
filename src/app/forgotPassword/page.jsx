@@ -1,5 +1,4 @@
 "use client";
-import NavBar from "@/components/nav_bar/page";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { IoMdArrowBack } from "react-icons/io";
@@ -26,7 +25,6 @@ export default function ForgotPassword() {
 
   return (
     <>
-      <NavBar />
       <div className={`${Style.container} container`}>
         <div
           className={`${Style.container_image} container-image`}
