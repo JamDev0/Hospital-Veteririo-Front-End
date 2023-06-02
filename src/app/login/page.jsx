@@ -1,7 +1,7 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import Style from "./styles.sass";
-import Image from "next/image";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -62,11 +62,11 @@ export default function Login() {
           />
 
           <div className="container-navigation-link">
-            <a href="/forgotPassword" className="container-forgotPassword">
+            <Link href="/forgotPassword" className="container-forgotPassword">
               Esqueceu sua senha?
-            </a>
+            </Link>
             <hr />
-            <a href="/register">Ainda não tem conta?</a>
+            <Link href="/register">Ainda não tem conta?</Link>
           </div>
           <button
             type="button"
