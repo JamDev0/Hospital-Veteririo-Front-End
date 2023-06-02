@@ -6,9 +6,10 @@ import Email from "@/components/form_components/email/page";
 import ConfirmPassword from "@/components/form_components/password/confirm_password/page";
 import Password from "@/components/form_components/password/page";
 import PhoneNumber from "@/components/form_components/phone_number/page";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
-import Style from "./styles.sass";
 import { IoMdArrowBack } from "react-icons/io";
+import Style from "./styles.sass";
 
 export default function Register() {
   const [email, setEmail] = useState("");
@@ -17,6 +18,8 @@ export default function Register() {
   const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const { back } = useRouter();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -36,7 +39,7 @@ export default function Register() {
   };
 
   const getBack = () => {
-    window.location.href = "/login";
+    back();
   };
 
   return (
