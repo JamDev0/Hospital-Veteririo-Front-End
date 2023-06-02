@@ -43,7 +43,7 @@ export default function Register() {
   };
 
   return (
-    <>
+    <div className='content'>
       <div
         className={`${Style.container_register} container-register-image`}
         onClick={() => getBack()}
@@ -73,6 +73,6 @@ export default function Register() {
           <Button />
         </form>
       </div>
-    </>
+    </div>
   );
 }
