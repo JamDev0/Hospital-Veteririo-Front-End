@@ -1,10 +1,5 @@
 @use '../../styles/mixins'
 @use '../../styles/variables'
-    
-body
-    max-width: variables.$container-width
-    overflow: hidden
-
 
 .container
     background-size: cover
@@ -12,9 +7,8 @@ body
     background-image: variables.$bg-image_dog
     color: variables.$primary-color
     width: 100vw
-    height: 100vh
-    padding: 1.5rem 1.5rem 1.5rem 4rem
-    margin-top: 5rem
+    flex: 1
+    padding: 5rem 1.5rem 1.5rem 4rem
 
     @media screen and (max-width: 480px)
         padding: 2rem
