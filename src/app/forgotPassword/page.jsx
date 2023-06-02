@@ -1,11 +1,14 @@
 "use client";
-import { useState } from "react";
-import Style from "./styles.sass";
 import NavBar from "@/components/nav_bar/page";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 import { IoMdArrowBack } from "react-icons/io";
+import Style from "./styles.sass";
 
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
+  
+  const { back } = useRouter();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,7 +21,7 @@ export default function ForgotPassword() {
   };
 
   const getBack = () => {
-    window.location.href = "/login";
+    back();
   };
 
   return (
